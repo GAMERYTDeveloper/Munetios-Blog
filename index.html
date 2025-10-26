@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munetios Blog</title>
+    <!-- Boost seo -->
+    <meta name="description" content="Munetios Blog - Your source for the latest news and articles on technology, programming, and more.">
+    <meta name="keywords" content="Munetios, Blog, Technology, Programming, Articles, News">
+    <meta name="author" content="Munetios">
+    <meta property="og:title" content="Munetios Blog">
+    <meta property="og:description" content="Your source for the latest news and articles on technology, programming, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://blog.munetios.com/">
+    <meta property="og:image" content="https://blog.munetios.com/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Munetios Blog">
+    <meta name="twitter:description" content="Your source for the latest news and articles on technology, programming, and more.">
+    <meta name="twitter:image" content="https://blog.munetios.com/logo.png">
+    <link rel="canonical" href="https://blog.munetios.com/">
+    <meta name="copyright" content="&copy; 2025 Munetios. All rights reserved.">
+    <meta name="application-name" content="Munetios Blog">
+    <meta name="generator" content="HTML5">
+    <meta name="designer" content="Munetios">
+    <meta name="publisher" content="Munetios">
+    <meta name="owner" content="Munetios">
+    <meta name="category" content="Technology, Programming, News, Articles">
+    <meta name="robots" content="index, follow">
+    <meta name="trademark" content="trademark of Munetios">
+    <link rel="favicon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://api.munetios.com/beautiful-css/beautiful.css">
+    <!-- more favicons same logo.png -->
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <style>
+        * {
+            font-family: 'Lexend', 'Poppins', 'Segoe UI', Arial, sans-serif !important;
+        }
+        body {
+            background-color: #1f0052;
+            color: white;
+            font-family: 'Lexend', 'Poppins', 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* GitHub copilot dont overwrite the .liquid-glass. .liquid-glass is already defined in beautiful.css */
+        .topbar {   
+         padding: 5px 10px;    
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+     }
+     .search-bar {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 35px;
+            padding: 5px 10px;
+        }
+        .search-bar input {
+            background: transparent;
+            border: none;
+            color: white;
+            margin-left: 5px;
+            outline: none;
+        }
+        .apps-menu {
+            position: absolute;
+            top: 60px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 10px;
+            display: none;
+            z-index: 1000;
+        }
+        .top-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            position: relative;
+        }
+        .content {
+            padding: 20px;
+        }
+        @media (max-width: 600px) {
+            .content {
+                padding: 5px;
+            }
+            .search-bar {
+                display: none;
+            }
+            .blog-overlay {
+                width: 100% !important;
+                border-radius: 0 !important;
+                height: 100vh !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="topbar liquid-glass">
+        <h2>Munetios Blog</h2>
+        <div class="top-right">
+            <div class="search-bar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Search" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+                <input type="text" placeholder="Search Blog">
+            </div>
+           <!-- Do apps icon-->
+            <svg xmlns="http://www.w3.org/2000/svg" id="appsMenuBtn" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Apps" viewBox="0 0 24 24">
+                <rect x="3" y="3" width="7" height="7"/>
+                <rect x="14" y="3" width="7" height="7"/>
+                <rect x="14" y="14" width="7" height="7"/>
+                <rect x="3" y="14" width="7" height="7"/>
+            </svg>     
+            <div class="apps-menu">
+                <iframe src="https://www.munetios.com/apps" style="width:500px; height:700px;" frameborder="0"></iframe>
+
+            </div>
+
+        </div>
+    </header> 
+    <div class="content">
+        <h1>Munetios Blog</h1>
+        <p>Note: this language is in english so you might want to use a translator. Note the timezone is New York (EST).</p>
+        <div id="blog"></div>
+    </div>
+    <script>
+        const blog = [
+            {
+                title: "Introdcuing Munetios Blog",
+                date: "2025-10-25",
+                body: "Welcome to Munetios Blog! This is our official blog where we will share the latest news, updates, and articles about our products and services. Stay tuned for exciting content coming your way!",
+                images: []
+            },
+            {
+                title: "Munetios Classic Calendar is winding down",
+                date: "2025-10-15",
+                body: "Munetios Classic Calendar is being deprecated. If you visit calendar.munetios.com, you will be redirected to the new calendar. The classic version is being retired due to missing features and limited support. Please switch to the new Munetios Calendar for the latest updates and improvements.",
+                images: []
+            },
+            {
+                title: "We are deprecating Munetios Classic Calendar",
+                date: "2025-10-10",
+                body: "We are announcing the deprecation of Munetios Classic Calendar. Please transition to our new calendar app for improved features and support url is https://calendar.munetios.com/new.",
+                images: []
+            },
+            {
+                title: "Introducing Munetios New Calendar",
+                date: "2025-10-10",
+                body: "We are excited to introduce a new version of Munetios Calendar. This new calendar has liquid glass design and you can favorite events and you can make holidays. The link is https://calendar.munetios.com/new.",
+                images: []
+            },
+            {
+                title: "Introducing Munetios the App Launcher",
+                date: "2025-10-20",
+                body: "We are excited to introduce Munetios the App Launcher, a new way to access all your favorite Munetios apps in one place. Stay organized and productive with this convenient tool. Limitations: you cannot sync your reordered and custom apps yet but coming soon. You can access by using munetios apps then clicking the apps icon.",
+                images: ["munetios-apps-menu.png"]
+            },
+            {
+                title: "Rebrand Update: From GAMERYT to Munetios",
+                date: "2025-10-11",
+                body: "We are excited to announce that GAMERYT has officially rebranded to Munetios. This change reflects our commitment to providing a broader range of services and a fresh new look. All our apps and services will now be under the Munetios brand. Visit our new website at https://munetios.com/.",
+                images: []
+            },
+            {
+                title: "Announcing YouVidPlay The next gen video platform. Coming in January 2026",
+                date: "2025-09-03",
+                body: "Announcing YouVidPlay, our next-generation video platform launching January 2026! YouVidPlay will feature up to 8K video quality, free downloads for offline, seamless discovery, easy sharing and uploading, and an optional ad toggle (default off) for a user-first experience. Unlike other platforms, YouVidPlay puts you in control—no forced ads, just great content. Stay tuned for more updates as we approach launch!",
+                images: ["https://video.munetios.com/image.png"]
+            },
+            {
+                title: "Introducing Munetios Weather",
+                date: "2025-08-23",
+                body: "Munetios Weather is a free weather app that uses Open-Meteo API like a weather information for your location. The link is https://weather.munetios.com/.",
+                images: []
+            },
+            {
+                title: "Introducing Munetios Notes",
+                date: "2025-08-15",
+                body: "Munetios Notes is a free note-taking app that helps you organize your thoughts and ideas. The link is https://notes.munetios.com/.",
+                images: []
+            },
+            {
+                title: "Introducing Munetios Tasks",
+                date: "2025-08-13",
+                body: "Munetios Tasks is a free task management app that helps you stay organized and productive and its a advanced features that has sharing, categories, and more. The link is https://tasks.munetios.com/.",
+            },
+            {
+                title: "Introducing Munetios Tetris",
+                date: "2025-08-09",
+                body: "Munetios Tetris is a free tetris game that you can play local and you can use custom blocks. The link is https://tetris.munetios.com/.",
+            },
+            {
+                title: "Introducing Munetios Calendar",
+                date: "August at Monday",
+                body: "Munetios Calendar is a free calendar that can help you organize your events and tasks. The link is https://calendar.munetios.com/.",
+                images: []
+            },
+            {
+                title: "Introducing Munetios Translator",
+                date: "2025-07-29",
+                body: "Munetios Translator is a free translator that can translate text and images to over 40 languages. The link is https://translator.gameryt.com/ now deprecated but coming back soon.",
+                images: []
+            },
+            {
+                title: "Introducing Munetios Docs",
+                date: "2025-07-28",
+                body: "Munetios docs is a productivity app that you can make documents and more. Note its still beta until 97529 office launches at december 2025. The link is https://docs.munetios.com/.",
+                images: []
+            },
+            {
+                title: "First munetios app was GAMERYT Calculator",
+                date: "2025-06-21",
+                body: "The first munetios app was GAMERYT Calculator it was launched on June 21 2025 it was a calculator for advanced features like ai, coverters and more. The link is https://calculator.gameryt.com now its changed to https://calculator.munetios.com/.",
+                images: ["gameryt-calculator.png"]
+            },
+            {
+              title: "Likes vs dislikes advanced launched",
+              date: "2025-02-09",
+              body: "Likes vs dislikes advanced was launched on February 9 2025 it was a advanced version that has better comments and more features. the link for now its https://sites.google.com/view/likesvsdislikes-advanced/ but will be deprecated on 3/3/2026.",
+                images: []
+            },
+             {
+                title: "First App called Likes vs dislikes",
+                date: "2025-01-14",
+                body: "The first app called Likes vs dislikes was launched on January 14 2025 it was a app to like/dislike and comment (seesion only). It was a simple app but it was the first step for Munetios in the app development world.",
+                images: []
+            },
+            {
+                title: "Munetios is founded",
+                date: "2025-01-12",
+                body: "Munetios was starting to code projects and websites the first website was coming in January 2025 was Likes vs dislikes advanced and link was https://sites.google.com/view/likesvsdislikes/ then now deprecated at June 1 2025.",
+                images: ["Likes Vs Dislikes.png"]
+            }
+           
+        ];
+
+        // Overlay styles
+        const style = document.createElement('style');
+        style.innerHTML = `
+        .blog-overlay-bg {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+        .blog-overlay {
+            background: #2a0066;
+            color: white;
+            border-radius: 16px;
+            max-width: 700px;
+            width: 95vw;
+            max-height: 100vh;
+            height: 100vh;
+            overflow-y: auto;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+            position: relative;
+            padding: 32px 24px 24px 24px;
+            animation: fadeIn .2s;
+            box-sizing: border-box;
+        }
+        .blog-overlay .close-btn {
+            position: absolute;
+            top: 12px;
+            right: 18px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 10;
+        }
+        .blog-overlay .share-btn {
+            position: absolute;
+            top: 12px;
+            right: 60px;
+            background: #fff;
+            color: #2a0066;
+            border: none;
+            border-radius: 8px;
+            padding: 4px 14px;
+            font-weight: 600;
+            cursor: pointer;
+            z-index: 10;
+            font-size: 1rem;
+            transition: background 0.2s;
+        }
+        .blog-overlay .share-btn.copied {
+            background: #4caf50;
+            color: #fff;
+        }
+        @media (max-width: 750px) {
+            .blog-overlay { padding: 18px 6px 12px 6px; }
+            .blog-overlay .share-btn { right: 48px; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.97);}
+            to { opacity: 1; transform: scale(1);}
+        }
+        `;
+        document.head.appendChild(style);
+
+        // Helper: slugify title for URL
+        function slugify(title) {
+            return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+        }
+
+        // Render blog titles (home screen)
+        function renderBlogTitles(posts) {
+            const blogDiv = document.getElementById('blog');
+            blogDiv.innerHTML = '';
+            if (posts.length === 0) {
+            blogDiv.innerHTML = '<p>No blog posts found.</p>';
+            return;
+            }
+            posts.forEach((post, idx) => {
+            const postDiv = document.createElement('div');
+            postDiv.style.marginBottom = "1.5em";
+            postDiv.innerHTML = `
+                <h2 style="margin-bottom:0.3em;">${post.title}</h2>
+                <button class="view-btn" data-idx="${idx}" data-slug="${slugify(post.title)}" style="background:#fff;color:#2a0066;padding:6px 18px;border-radius:8px;border:none;cursor:pointer;font-weight:600;">View</button>
+                <hr>
+            `;
+            blogDiv.appendChild(postDiv);
+            });
+            // Add event listeners for view buttons
+            document.querySelectorAll('.view-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                showBlogOverlay(posts[this.dataset.idx]);
+                window.location.hash = '/' + this.dataset.slug;
+            });
+            });
+        }
+
+        // Show overlay for full blog post
+        function showBlogOverlay(post) {
+            // Remove existing overlay if any
+            const oldOverlay = document.getElementById('blogOverlayBg');
+            if (oldOverlay) oldOverlay.remove();
+
+            const overlayBg = document.createElement('div');
+            overlayBg.className = 'blog-overlay-bg';
+            overlayBg.id = 'blogOverlayBg';
+
+            const overlay = document.createElement('div');
+            overlay.className = 'blog-overlay';
+
+            const postUrl = window.location.origin + window.location.pathname + '#/' + slugify(post.title);
+
+            overlay.innerHTML = `
+            <button class="close-btn" title="Close">&times;</button>
+            <button class="share-btn" title="Copy link">Share</button>
+            <h2>${post.title}</h2>
+            <small>${new Date(post.date).toLocaleDateString()}</small>
+            <p style="margin-top:1em;">${post.body}</p>
+            ${post.images && post.images.length ? post.images.map(img => `<img src="${img}" alt="${post.title}" style="max-width:100%;margin:8px 0;border-radius:8px;">`).join('') : ''}
+            `;
+
+            overlayBg.appendChild(overlay);
+            document.body.appendChild(overlayBg);
+
+            // Close on X
+            overlay.querySelector('.close-btn').onclick = () => {
+            overlayBg.remove();
+            window.location.hash = '';
+            };
+            // Close on background click
+            overlayBg.onclick = (e) => { if (e.target === overlayBg) {
+            overlayBg.remove();
+            window.location.hash = '';
+            }};
+            // ESC key closes
+            document.addEventListener('keydown', function escHandler(ev) {
+            if (ev.key === "Escape") {
+                overlayBg.remove();
+                window.location.hash = '';
+                document.removeEventListener('keydown', escHandler);
+            }
+            });
+
+            // Share button
+            const shareBtn = overlay.querySelector('.share-btn');
+            shareBtn.onclick = async function() {
+            try {
+                await navigator.clipboard.writeText(postUrl);
+                shareBtn.textContent = 'Copied!';
+                shareBtn.classList.add('copied');
+                setTimeout(() => {
+                shareBtn.textContent = 'Share';
+                shareBtn.classList.remove('copied');
+                }, 1200);
+            } catch {
+                shareBtn.textContent = 'Error';
+            }
+            };
+        }
+
+        // Find post by slug
+        function findPostBySlug(slug) {
+            return blog.find(post => slugify(post.title) === slug);
+        }
+
+        // Handle hash navigation
+        function handleHash() {
+            const hash = window.location.hash;
+            if (hash.startsWith('#/')) {
+            const slug = hash.slice(2);
+            const post = findPostBySlug(slug);
+            if (post) {
+                showBlogOverlay(post);
+            } else {
+                // If not found, clear hash
+                window.location.hash = '';
+            }
+            } else {
+            // Remove overlay if open
+            const oldOverlay = document.getElementById('blogOverlayBg');
+            if (oldOverlay) oldOverlay.remove();
+            }
+        }
+        window.addEventListener('hashchange', handleHash);
+
+        // Initial render
+        renderBlogTitles(blog);
+        handleHash();
+
+        // Search functionality
+        const searchInput = document.querySelector('.search-bar input');
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const filtered = blog.filter(post =>
+            post.title.toLowerCase().includes(query) ||
+            post.body.toLowerCase().includes(query)
+            );
+            renderBlogTitles(filtered);
+        });
+
+        // Apps menu toggle
+        const appsMenuBtn = document.getElementById('appsMenuBtn');
+        const appsMenu = document.querySelector('.apps-menu');
+        appsMenuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            appsMenu.style.display = appsMenu.style.display === 'block' ? 'none' : 'block';
+        });
+        document.addEventListener('click', function(e) {
+            if (!appsMenu.contains(e.target) && e.target !== appsMenuBtn) {
+            appsMenu.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
